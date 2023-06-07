@@ -1,0 +1,189 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../image/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.to-do__container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  border: 2px solid #000000;
+  box-shadow: 2px 0 5px 5px #888888;
+  height: 58rem;
+  width: 40rem;
+  background-color: #ececec;
+}
+
+.toDo__list__notCompleted,
+.toDo__list__completed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 12.5em;
+  overflow: auto;
+}
+
+.toDo__list__notCompleted--item,
+.toDo__list__Completed--item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3em;
+  background-color: rgba(105, 105, 105, 0.2);
+  width: 30em;
+  margin-bottom: 0.2em;
+  height: 2em;
+  padding: 0.5em;
+  border: solid 0.1em rgba(105, 105, 105, 0.8);
+  background: linear-gradient(0.25turn, #9a9a9a, #a6a6a6);
+}
+
+.toDo__list__Completed--item {
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none;
+}
+
+.toDo__list__notCompleted--item:hover .hidden {
+  display: block;
+}
+
+.trashButton {
+  position: absolute;
+  right: 1em;
+  bottom: 0.8em;
+  background-color: red;
+  border: none;
+  height: 2em;
+  width: 2em;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.checker {
+  height: 2em;
+  width: 2em;
+}
+
+.toDo__item__notCompleted--text,
+.toDo__item__Completed--text {
+  font-size: 1.5em;
+}
+
+.toDo__item__Completed--text {
+  text-decoration: line-through;
+}
+
+h3 {
+  font-size: 2em;
+  align-self: flex-start;
+  margin-left: 2.2em;
+}
+
+.toDo__item__notCompleted,
+.toDo__item__Completed {
+  font-size: 2em;
+}
+
+.buttons {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.date {
+  font-size: 2em;
+  margin: 1em;
+  align-self: flex-start;
+  font-family: "Oswald", sans-serif;
+}
+
+.date p {
+  margin: 0.2em;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input__toDo {
+  height: 3em;
+  width: 30rem;
+  font-size: 1em;
+}
+
+.fa-plus {
+  font-size: 3em;
+}
+
+.plusButton {
+  width: 5em;
+  height: 4em;
+  margin-left: 1em;
+  color: #ffffff;
+  background: linear-gradient(#a6a6a6, #5a5a5a);
+  border-radius: 10%;
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 1em;
+  width: 40em;
+}
+
+.buttons__showCompleteButton,
+.buttons__clearButton {
+  width: 10em;
+  height: 3em;
+  cursor: pointer;
+  background: linear-gradient(#a6a6a6, #5a5a5a);
+  color: #ffffff;
+  font-size: 1em;
+  border-radius: 10%;
+}
+
+.turnedOff {
+  display: none;
+}
+
+.fade {
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

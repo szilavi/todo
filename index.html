@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/7e9f186741.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ToDo app</title>
+  </head>
+  <body>
+    <main class="to-do__container">
+      <div class="date">
+        <p class="date__day"></p>
+        <p class="date__dateTime"></p>
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          name="toDoIn"
+          id="toDo"
+          class="input__toDo"
+          placeholder="Take the garbage out"
+          maxlength="32"
+        />
+        <button class="plusButton">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <h3 class="toDoCounter"></h3>
+      <div class="toDo__list__notCompleted"></div>
+      <h3 class="preToDo__list__Completed">
+        Completed tasks: <span class="completed__percent">100%</span>
+      </h3>
+      <div class="toDo__list__completed"></div>
+      <div class="buttons">
+        <button class="buttons__showCompleteButton">Hide Complete</button>
+        <button class="buttons__clearButton">Clear All</button>
+      </div>
+    </main>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
